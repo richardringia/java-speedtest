@@ -17,11 +17,14 @@ public class Main {
 
     public static void bubble() {
         long start = System.currentTimeMillis();
-        Integer[] list1 = GenerateList.generate();
-        Integer[] list2 = GenerateList.generate();
 
-        BubbleSort.sort(list1);
-        BubbleSort.sort(list2, new IntegerComparator());
+        for (int i = 0; i < 20; i++) {
+            Integer[] list1 = GenerateList.generate();
+            Integer[] list2 = GenerateList.generate();
+
+            BubbleSort.sort(list1);
+            BubbleSort.sort(list2, new IntegerComparator());
+        }
         long finish = System.currentTimeMillis();
         System.out.println("Bubble sort: " + (finish - start));
     }
